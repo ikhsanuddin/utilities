@@ -1,0 +1,18 @@
+export const codeMessage = {
+  200: "Request success. ",
+  201: "Create or update data success. ",
+  202: "The request has been inserted to the queue.  ",
+  204: "Delete data success.  ",
+  400: "The request sent was error. The server did not perform any operations to create or modify data.  ",
+  401: "You did not have permission (token, username, password is incorrect).  ",
+  403: "User authorized, but access is forbidden.  ",
+  404: "The request was made for something that does not exist.  ",
+  406: "The format of the request is not available.  ",
+  409: "The format of the request is not available.  ",
+  410: "The requested resource is permanently deleted and will not be obtained again.  ",
+  422: "Validation error occurred.  ",
+  500: "The server has an error, please check the server.  ",
+  502: "Gateway error.  ",
+  503: "The service is unavailable, the server is temporarily overloaded or under maintenance.  ",
+  504: "The gateway timed out.  ",
+};
