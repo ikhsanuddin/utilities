@@ -6,3 +6,7 @@ export const sanitizeObject = (data) =>
         : prev,
     {}
   );
+
+export const distinctArray = (array) => {
+  [...new Set(array)];
+};
