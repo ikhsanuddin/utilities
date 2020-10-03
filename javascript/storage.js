@@ -21,6 +21,7 @@ export function setCookie(name, value, expiredDays) {
   document.cookie = name + "=" + value + ";" + expires + ";path=/";
 }
 
+
 export const removeCookie = (key, options) => {
   this.setCookie(key, undefined, options);
 };
