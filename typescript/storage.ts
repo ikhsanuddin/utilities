@@ -14,27 +14,26 @@ export function getCookie(cookie, cname) {
   return false;
 }
 
-export function setCookie(name, value, expiredDays) {
+export function setCookie(key: string, value:any, expiredDays: number) {
   const d = new Date();
   d.setTime(d.getTime() + expiredDays * 24 * 60 * 60 * 1000);
   let expires = "expires=" + d.toUTCString();
-  document.cookie = name + "=" + value + ";" + expires + ";path=/";
+  document.cookie = key + "=" + value + ";" + expires + ";path=/";
 }
 
-
-export const removeCookie = (key, options) => {
-  this.setCookie(key, undefined, options);
+export const removeCookie = (key: string, expired:number = 0) => {
+  setCookie(key, undefined, expired);
 };
 
 export const clearPWACache = () => {
-  self.addEventListener("activate", function (e) {
-    // eslint-disable-next-line no-console
+  self.addEventListener("activate", (e) => {
     console.log("[ServiceWorker] Activate");
-
+    
+    // @ts-ignore
     e.waitUntil(
       caches.keys().then(function (keyList) {
         return Promise.all(
-          keyList.map(function (key) {
+          keyList.map((key) =>  {
             if (key !== "cdn") {
               // eslint-disable-next-line no-console
               console.log("[ServiceWorker] Removing old cache", key);
@@ -45,6 +44,7 @@ export const clearPWACache = () => {
       })
     );
 
+    // @ts-ignore
     return self.clients.claim();
   });
 };
