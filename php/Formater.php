@@ -2,8 +2,14 @@
 
 namespace App\Helpers;
 
-class Helper
+class Formater
 {
+    /**
+     * Convert mime type (media type) into file extention.
+     *
+     * @param string $mime
+     * @return string|false
+     */
     public static function mime2ext(string $mime)
     {
         $mime_map = [
@@ -197,6 +203,13 @@ class Helper
         return isset($mime_map[$mime]) ? $mime_map[$mime] : false;
     }
 
+    /**
+     * Convert string into slug-style-string.
+     *
+     * @param string $text
+     * @param string $divider string that replace space
+     * @return string
+     */
     public static function slugify(string $text, string $divider = '-')
     {
         // replace non letter or digits by divider
