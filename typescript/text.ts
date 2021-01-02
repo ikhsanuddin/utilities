@@ -1,9 +1,9 @@
 /**
  * Capitalize first letter in word of string
  * @param string string
- * @returns string
+ * @returns {string}
  */
-export const capitalize = (string: string) => {
+export const capitalize = (string: string): string => {
   return string.charAt(0).toUpperCase() + string.slice(1);
 };
 
@@ -11,10 +11,10 @@ export const capitalize = (string: string) => {
  * * This function create a slug friendily to use in your web application
  * * Compatibility with chinese characters
  * * Chinese characters doesn't require any modification
- * @param slug string
- * @returns cleaned slug
+ * @param {string} string
+ * @returns {string} cleaned slug
  */
-export const slugify = (string: string) => {
+export const slugify = (string: string): string => {
   const a =
     "àáâäæãåāăąçćčđďèéêëēėęěğǵḧîïíīįìıİłḿñńǹňôöòóœøōõőṕŕřßśšşșťțûüùúūǘůűųẃẍÿýžźż·/_,:;";
   const b =

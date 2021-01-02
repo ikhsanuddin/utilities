@@ -1,12 +1,14 @@
 /** Add leadng zero in font of number below 10
- * @param number
+ * @param {number} val
+ * @returns {number|string}
  */
-export function fixedZero(val: number) {
+export function fixedZero(val: number): number | string {
   return val * 1 < 10 ? `0${val}` : val;
 }
 
-/** ACurrency format using International number format
- *  Default in Indonesia
+/** Currency format using International number format
+ *
+ * Default in Indonesian format
  */
 export const formatCurrency = (
   value: number,

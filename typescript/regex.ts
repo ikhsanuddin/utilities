@@ -4,18 +4,18 @@ export const usernameRegex = /^(?!.*[_.]{2})([\w.]){4,20}$/;
 export const urlRegex =
   /(((^https?:(?:\/\/)?)(?:[-;:&=\+\$,\w]+@)?[A-Za-z0-9.-]+(?::\d+)?|(?:www.|[-;:&=\+\$,\w]+@)[A-Za-z0-9.-]+)((?:\/[\+~%\/.\w-_]*)?\??(?:[-\+=&;%@.\w_]*)#?(?:[\w]*))?)$/;
 
-export function isEmail(path) {
-  return emailRegex.test(path);
+export function isEmail(string: string): boolean {
+  return emailRegex.test(string);
 }
 
-export function isPhone(path) {
-  return phoneRegex.test(path);
+export function isPhone(string: string): boolean {
+  return phoneRegex.test(string);
 }
 
-export function isUsername(path) {
-  return usernameRegex.test(path);
+export function isUsername(string: string): boolean {
+  return usernameRegex.test(string);
 }
 
-export function isUrl(path) {
-  return urlRegex.test(path);
+export function isUrl(string: string): boolean {
+  return urlRegex.test(string);
 }

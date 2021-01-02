@@ -1,6 +1,20 @@
+/** Make Object have a unique value,
+ * remove value that invalid or empty
+ * @param {any} object
+ * @param {Object} option Option to object value that need to be included
+ * @return {any}
+ **/
 export const sanitizeObject = (
-  object,
-  option = {
+  object: any,
+  option: {
+    acceptEmptyString: boolean;
+    acceptNull: boolean;
+    acceptUndefined: boolean;
+    acceptEmptyObject: boolean;
+    acceptEmptyArray: boolean;
+    acceptBoolean: boolean;
+    acceptZero: boolean;
+  } = {
     acceptEmptyString: false,
     acceptNull: false,
     acceptUndefined: false,
@@ -9,7 +23,7 @@ export const sanitizeObject = (
     acceptBoolean: true,
     acceptZero: true,
   }
-) => {
+): any => {
   const {
     acceptBoolean,
     acceptEmptyArray,
@@ -63,6 +77,11 @@ export const sanitizeObject = (
   }, {});
 };
 
-export const distinctArray = (array) => {
-  [...new Set(array)];
+/** Make Array have a unique value,
+ * remove value that duplicate
+ * @param {any[]} array
+ * @return {any[]}
+ **/
+export const distinctArray = (array: any[]): any[] => {
+  return [...new Set(array)];
 };
