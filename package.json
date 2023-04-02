@@ -1,9 +1,9 @@
 {
   "name": "utils-by-ikhsanuddin",
-  "version": "0.0.1",
-  "description": "Utilities function for everyday Javascript appliction development, written by Ikhsanuddin",
+  "version": "0.1.0",
+  "description": "Utilities function for everyday Javascript appliction development, used by Ikhsanuddin",
   "files": [
-    "src/**/*"
+    "lib/**/*"
   ],
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
@@ -12,7 +12,7 @@
   },
   "scripts": {
     "test": "jest",
-    "build": "tsc",
+    "build": "tsc --project tsconfig.json",
     "semantic-release": "semantic-release",
     "format": "prettier --write \"src/**/*.ts\" \"src/**/*.js\" --config ./.prettierrc ",
     "lint": "eslint src/**/*.{js,ts,json}",
@@ -20,7 +20,6 @@
     "prepare": "npm run build",
     "prepublishOnly": "npm test && npm run lint",
     "preversion": "npm run lint",
-    "version": "npm run format && git add -A src",
     "postversion": "git push && git push --tags"
   },
   "keywords": [
