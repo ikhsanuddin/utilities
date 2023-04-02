@@ -34,10 +34,10 @@ export const slugify = (string: string): string => {
     .replace(/&/g, "-and-") 
     
     // Remove all non-word characters
-    .replace(/[^\w\-]+/g, "") 
+    .replace(/[^\w-]+/g, "") 
     
     // Replace multiple - with single -
-    .replace(/\-\-+/g, "-") 
+    .replace(/--+/g, "-") 
     
     // Trim - from start of text
     .replace(/^-+/, "") 

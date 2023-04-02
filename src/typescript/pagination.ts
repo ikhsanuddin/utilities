@@ -1,4 +1,8 @@
-export const getPagination = (pagination, filtersArg, sorter) => {
+export const getPagination = (
+  pagination: { current: any; pageSize: any },
+  filtersArg: { [x: string]: any },
+  sorter: { field: any; order: any }
+) => {
   const filters: any = Object.keys(filtersArg).reduce((obj, key) => {
     const newObj = { ...obj };
     // @ts-ignore

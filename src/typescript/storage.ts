@@ -2,9 +2,9 @@
  * @param {string} cname Name of cookie to get
  */
 export function getCookie(cname: string) {
-  let name = cname + "=";
-  let decodedCookie = decodeURIComponent(document.cookie);
-  let ca = decodedCookie.split(";");
+  const name = cname + "=";
+  const decodedCookie = decodeURIComponent(document.cookie);
+  const ca = decodedCookie.split(";");
   for (let i = 0; i < ca.length; i++) {
     let c = ca[i];
     while (c.charAt(0) == " ") {
@@ -25,7 +25,7 @@ export function getCookie(cname: string) {
 export function setCookie(key: string, value: any, expiredDays: number) {
   const d = new Date();
   d.setTime(d.getTime() + expiredDays * 24 * 60 * 60 * 1000);
-  let expires = "expires=" + d.toUTCString();
+  const expires = "expires=" + d.toUTCString();
   document.cookie = key + "=" + value + ";" + expires + ";path=/";
 }
 

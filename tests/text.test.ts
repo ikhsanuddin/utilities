@@ -1,6 +1,9 @@
+// @ts-nocheck
 import { fixedZero, isUrl } from '../src';
+import {describe, expect, it, test} from '@jest/globals';
 
-test('fixedZero tests', () => {
+
+describe('fixedZero tests', () => {
   it('should not pad large numbers', () => {
     expect(fixedZero(10)).toEqual(10);
     expect(fixedZero(11)).toEqual(11);
@@ -24,7 +27,7 @@ test('fixedZero tests', () => {
   });
 });
 
-test('isUrl tests', () => {
+describe('isUrl tests', () => {
   it('should return false for invalid and corner case inputs', () => {
     expect(isUrl([])).toBeFalsy();
     expect(isUrl({})).toBeFalsy();
