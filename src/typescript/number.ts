@@ -12,7 +12,7 @@ export function fixedZero(val: number): number | string {
  */
 export const formatCurrency = (
   value: number,
-  prefix: string = "",
+  prefix = "",
   option: {
     language?: string;
     maxDigits?: number;

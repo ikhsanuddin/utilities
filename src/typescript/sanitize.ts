@@ -33,7 +33,7 @@ export const sanitizeObject = (
     acceptUndefined,
     acceptZero,
   } = option;
-  return Object.keys(object).reduce((prev, key) => {
+  return Object.keys(object).reduce((prev: any, key) => {
     const val = object[key];
     const type = typeof val;
     switch (type) {

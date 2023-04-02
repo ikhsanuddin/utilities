@@ -23,12 +23,28 @@ export const slugify = (string: string): string => {
 
   return string
     .toString()
-    .replace(/\s+/g, "-") // Replace spaces with -
-    .replace(p, (c) => b.charAt(a.indexOf(c))) // Replace special characters
-    .replace(/&/g, "-and-") // Replace & with 'and'
-    .replace(/[^\w\-]+/g, "") // Remove all non-word characters
-    .replace(/\-\-+/g, "-") // Replace multiple - with single -
-    .replace(/^-+/, "") // Trim - from start of text
-    .replace(/-+$/, "") // Trim - from end of text
+    
+    // Replace spaces with -
+    .replace(/\s+/g, "-") 
+    
+    // Replace special characters
+    .replace(p, (c) => b.charAt(a.indexOf(c))) 
+    
+    // Replace & with 'and'
+    .replace(/&/g, "-and-") 
+    
+    // Remove all non-word characters
+    .replace(/[^\w-]+/g, "") 
+    
+    // Replace multiple - with single -
+    .replace(/--+/g, "-") 
+    
+    // Trim - from start of text
+    .replace(/^-+/, "") 
+    
+    // Trim - from end of text
+    .replace(/-+$/, "") 
+    
+    // Lower Case
     .toLocaleLowerCase();
 };
