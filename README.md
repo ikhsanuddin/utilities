@@ -2,15 +2,34 @@
 
 This is **Utilities** that built with ❤ on some code that i use.
 
-### Utulities Monorepo written in
+### Utulities Monorepo with some flavours available
  - Typescript
  - PHP
 
 ---
 
+
+# Usage
+
+npm
+```bash
+$ npm install utils-by-ikhsanuddin
+```
+
+yarn
+```bash
+$ yarn add utils-by-ikhsanuddin
+```
+pnpm
+```bash
+$ pnpm add utils-by-ikhsanuddin
+```
+
+# Development
+
 This README is guide how to run the code
 
-before we start you need to install some tools to work
+before we start you need to install some tools for development
 
 ![code](doc/code.gif)
 
